@@ -1,6 +1,7 @@
 FROM centos:latest
 
-RUN yum check-update; yum install -y gcc libffi-devel python-devel openssl-devel epel-release python-pip python-wheel
+RUN yum check-update; yum install -y gcc libffi-devel python-devel openssl-devel epel-release
+RUN yum install -y python-pip python-wheel
 
 RUN pip install ansible[azure]
 
